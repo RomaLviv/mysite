@@ -1,0 +1,84 @@
+<div class="langBook" ng-show="allLang">
+   
+ <div class="searchLang"  ng-show="searchLang">
+		
+			<h6><input class="addLangButton" type="button" ng-click="addItem()" value="Add/Reg" ng-show="regedit"></h6><p>Швидкий пошук:<input type="text" class="filt" ng-model="langsearch"></p>
+			
+		</div>
+		
+		
+<!--
+		 <div class="headLangBlock" ng-show="true">
+
+            <h6><input class="addLangButton" type="button" ng-click="addItem()" value="Add/Reg"> </h6>
+        </div>
+-->
+        
+        
+   <div class="langBlock">
+   
+    <div ng-show="allItems" class="allLang">
+       
+       
+        
+       
+        
+
+        <div class="lang" ng-repeat="a in myWelcome2 | filter:langsearch | filter: sortTovars track by $index" ng-click="chooseItem(a.id,a.name,a.price,$index,a.src)">
+           <img src="../img/{{a.src}}" width="50px;" height="50px">
+            <h5>{{a.name}}</h5>
+            <h5>{{a.price}}</h5>
+        </div>
+<!--
+        <div class="pagin">
+            <ul class="paggAddrUl">
+                <li ng-repeat="b in pagArr track by $index">
+                    <a ng-click="pagAddress($index)" class="pagAddr">{{b}}</a>
+                </li>
+            </ul>
+        </div>
+-->
+   
+    </div>
+    
+    <div ng-show="statusItem" class="choosenLang" ng-click="aboutLang()">
+      
+       <div class="mainLang">
+       	
+       	  <div class="headItemsBlock">
+           <img src="../img/{{choosenItemSrc}}" width="100px" height="100px">
+            <h1>{{choosenItemName}}</h1>
+            
+        </div>
+        <div>
+           
+           <h2>Вартість: </h2><h2> {{choosenItemPrice | currency}}</h2>
+            <input type="button" ng-click="backToAllItems()" value="Back"><br><br>
+            
+            
+<!--            <input type="button" value="Reg" ng-click="editItem()">-->
+            <input type="button" value="Delete" class="deleteLang" ng-show="regedit" ng-click="deleteItem()">
+            
+        </div>
+       </div>
+      
+        <div class="aboutLang">
+        	<p>{{choosenItemText}}</p>
+        </div>
+<!--
+        <div ng-show="editItemStatus">
+            <h2>Name :</h2><input type="text" ng-model="newNameOfItem"><br>
+            <h2>Price :</h2><input type="text" ng-model="newPriceOfItem"><br>
+            <h2>About Item :</h2><textarea ng-model="newInfoOfItem"></textarea><br>
+            <img src="../img/{{newItemSrc}}" width="100px" height="50px"> 
+            <label class="uploadbutton" ng-click="changeSatusImgUpload()">
+            <div class="button">Upload</div>
+            <input type="file" file-model="myFile" >
+            </label><br>
+            <input type="button" ng-click="changeItemEdit()" value="Change">
+        </div>
+-->
+    </div>
+    <add-lang-block></add-lang-block>
+</div>
+</div>

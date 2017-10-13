@@ -1,0 +1,39 @@
+<div class="addItemField" ng-show="addItemStatus">
+    <div class="headItemsBlock">
+        <h1>Add Lang</h1>
+    </div>
+    <div class="newItemBlock">
+      
+       <div class="left">
+       	<form role="form" name="newItemForm" novalidate>
+
+            <input type="text" ng-model="nameOfNewItem" placeholder="Name" required><br>
+
+            <input type="text" ng-model="priceOfNewItem" placeholder="Cost" required><br>
+
+           <br>
+            
+<!--
+            <label class="uploadbutton">
+            <div class="button">Upload</div>
+            <input type="file" file-model="myFile">
+            </label><br>
+-->
+
+
+            <button type="button" ng-click="addNewItem(fileOfNewItem)" ng-disabled="newItemForm.$invalid"><span><i></i></span>Create</button>
+
+            <button type="button"ng-click="backFromAddItem()"><span><i></i></span>Back</button>
+        </form>
+       	
+       </div>
+       
+        
+        
+        <div class="right">
+        	 <textarea ng-model="aboutNewItem" class="infoarea" placeholder="About" required></textarea>
+        	
+        </div>
+    </div>
+
+</div>

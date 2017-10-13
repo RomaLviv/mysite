@@ -1,0 +1,38 @@
+
+<div class="logBlock" ng-show="loginBL">
+
+<div ng-show="newUser">
+
+
+<form role="form" name="myForm" novalidate>
+<button class="btnLog" type="button" ng-click="check()" ng-disabled="myForm.$invalid">LogIn</button>
+
+<input class="userInp" type="text" ng-model="login" placeholder="User name" required autofocus/>
+<input class="userInp" type="password" ng-model="password" placeholder="Password" required/>
+
+<input class="Rbtn" type="button" ng-click="forget()" value="Restore password!">
+<input class="Rbtn" type="button" ng-click="registr()" value="Registration">
+ 
+<!--
+<a href="#"ng-click="forget()">Restore password!</a> 
+<a href="#" ng-click="registr()">Registration</a>
+-->
+</form>
+</div>
+
+
+
+<div ng-show="enterLogin">
+<form role="form">
+<p><button type="button" class="btnLog" ng-show="lout" ng-click="logOut()">LogOut</button><span class="userHello">{{userIn}}</span><input type="button" class="btnLog"  ng-click="space()" value="My Space"></p>
+</form>
+</div>
+<ul>
+		<li class="holovna" ng-click="chooseHolovna()"><a href="">Головна</a></li>
+		<li class="contacts" ng-click="chooseCont()"><a href="">Контакти</a></li>
+</ul>
+
+
+<p>{{user}}</p>
+      
+</div>

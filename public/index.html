@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lang</title>
+	<base href="/">
+	<style>
+   @font-face {
+    font-family: new;
+    src: url(fonts/Adventure.ttf);
+   }
+  
+		
+		
+		
+  </style>
+  <link rel="shortcut icon" href="img/M.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/css/ngDialog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/css/ngDialog-theme-default.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/1.4.0/js/ngDialog.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/my.js"></script>
+
+</head>
+<ng-view></ng-view>
+
+<body ng-controller="myCtrl">
+
+<header>
+<menumin-block></menumin-block>
+<!--
+<div class="headerField">
+    
+    
+</div>
+-->
+
+</header>
+
+
+
+
+
+<nav>
+
+<social-block></social-block>
+
+<menu-block></menu-block>
+<slider-block></slider-block>
+</nav>
+
+<content>
+
+<lang-block></lang-block>
+<content-block></content-block>
+<price-block></price-block>
+
+</content>
+
+<footer>
+
+<contact-block></contact-block>
+
+</footer>
+
+<div class="chatShow">
+	<img src="img/chatIcon.png" alt="" class="chatIco">
+</div>
+<chat-block></chat-block>
+
+    
+    
+   
+
+
+</body>
+</html>
